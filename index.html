@@ -108,11 +108,6 @@ section{padding:clamp(2.5rem,7vw,5.5rem) clamp(1rem,5vw,4rem);}
 .tl-title{font-family:'Playfair Display',serif;font-size:clamp(1rem,3vw,1.25rem);color:var(--pink-soft);margin-bottom:0.25rem;}
 .tl-desc{font-size:clamp(0.88rem,2.5vw,1rem);color:var(--text-dim);font-style:italic;line-height:1.65;}
 
-/* TYPEWRITER */
-.message-section{max-width:700px;margin:0 auto;text-align:center;}
-.typewriter-box{font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,2.8vw,1.4rem);font-style:italic;color:var(--rose-light);line-height:1.9;min-height:160px;padding:0 0.5rem;}
-.cursor{display:inline-block;width:2px;height:1.1em;background:var(--rose-gold);vertical-align:middle;animation:blink 0.8s step-end infinite;margin-left:2px;}
-
 /* GALLERY */
 .gallery-section{text-align:center;}
 .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr));gap:1.3rem;max-width:960px;margin:0 auto;}
@@ -125,21 +120,6 @@ section{padding:clamp(2.5rem,7vw,5.5rem) clamp(1rem,5vw,4rem);}
 .gallery-placeholder-inner{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem;}
 .gallery-placeholder-inner span{font-size:2.2rem;opacity:0.35;filter:drop-shadow(0 0 6px rgba(255,107,157,0.5));}
 .gallery-placeholder-inner p{font-size:0.65rem;color:var(--text-dim);letter-spacing:0.15em;text-transform:uppercase;}
-.gallery-info{padding:0.9rem 1.1rem 1rem;border-top:1px solid rgba(201,149,108,0.1);}
-.gallery-caption-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(0.92rem,2.5vw,1.08rem);color:var(--pink-soft);margin-bottom:0.25rem;line-height:1.4;}
-.gallery-date-text{font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--rose-gold);letter-spacing:0.2em;opacity:0.8;}
-
-/* WISH */
-.wish-section{text-align:center;padding-bottom:2rem;}
-.wish-box{max-width:480px;margin:0 auto;background:var(--card-bg);border:1px solid rgba(201,149,108,0.2);border-radius:14px;padding:1.8rem 1.3rem;}
-.wish-input{width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(201,149,108,0.25);border-radius:8px;color:var(--text);font-family:'Cormorant Garamond',serif;font-size:1rem;padding:0.75rem 0.9rem;outline:none;resize:none;transition:border-color 0.3s;line-height:1.6;}
-.wish-input:focus{border-color:var(--rose-gold);}
-.wish-input::placeholder{color:var(--text-dim);font-style:italic;}
-.wish-submit{margin-top:0.75rem;background:linear-gradient(135deg,var(--rose-gold),var(--pink-deep));border:none;border-radius:8px;color:white;cursor:pointer;font-family:'Cormorant Garamond',serif;font-size:0.95rem;letter-spacing:0.2em;padding:0.7rem 1.5rem;width:100%;transition:transform 0.2s,box-shadow 0.2s;}
-.wish-submit:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(212,96,122,0.35);}
-#wish-display{margin-top:1.2rem;}
-.wish-item{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(0.92rem,2.5vw,1.05rem);color:var(--rose-light);padding:0.55rem 0;border-bottom:1px solid rgba(201,149,108,0.1);animation:fade-up 0.5s ease forwards;line-height:1.6;}
-.wish-item:last-child{border-bottom:none;}
 
 /* CONFETTI */
 .confetti-piece{position:fixed;pointer-events:none;z-index:200;top:-10px;animation:confetti-fall linear forwards;}
@@ -156,7 +136,6 @@ section{padding:clamp(2.5rem,7vw,5.5rem) clamp(1rem,5vw,4rem);}
 @keyframes bob{0%,100%{transform:rotate(45deg) translateY(0);}50%{transform:rotate(45deg) translateY(6px);}}
 @keyframes pulse-gold{0%,100%{filter:drop-shadow(0 0 18px rgba(201,149,108,0.7));}50%{filter:drop-shadow(0 0 32px rgba(201,149,108,1));}}
 @keyframes neon-flicker{0%,19%,21%,23%,25%,54%,56%,100%{opacity:1;}20%,24%,55%{opacity:0.7;}}
-@keyframes blink{50%{opacity:0;}}
 @keyframes heartbeat{0%,100%{transform:scale(1);}14%{transform:scale(1.2);}28%{transform:scale(1);}42%{transform:scale(1.15);}56%{transform:scale(1);}}
 @keyframes wave-bar{0%,100%{transform:scaleY(0.5);}50%{transform:scaleY(1.3);}}
 
@@ -164,9 +143,6 @@ section{padding:clamp(2.5rem,7vw,5.5rem) clamp(1rem,5vw,4rem);}
 @media(max-width:480px){
   .ascii-cake{font-size:0.34rem;padding:0.8rem;}
   .gallery-grid{grid-template-columns:1fr 1fr;gap:0.75rem;}
-  .gallery-info{padding:0.6rem 0.7rem 0.7rem;}
-  .gallery-caption-text{font-size:0.82rem;}
-  .gallery-date-text{font-size:0.55rem;}
   .music-bar{right:0.6rem;bottom:0.6rem;padding:0.45rem 0.8rem 0.45rem 0.55rem;gap:0.5rem;}
   .timeline{padding-left:1.4rem;}
   .tl-dot{left:-1.2rem;}
@@ -283,34 +259,9 @@ section{padding:clamp(2.5rem,7vw,5.5rem) clamp(1rem,5vw,4rem);}
     <div class="timeline" id="timeline"></div>
   </section>
 
-  <!-- TYPEWRITER -->
-  <section class="message-section">
-    <p class="section-label tc">✦ 05 / words</p>
-    <h2 class="section-title tc">From the Heart</h2>
-    <div class="divider"></div>
-    <div class="typewriter-box">
-      <span id="typewriter-text"></span><span class="cursor" id="cursor"></span>
-    </div>
-  </section>
-
   <!-- GALLERY -->
   <section class="gallery-section">
-    <p class="section-label tc">✦ 06 / memories</p>
-    <h2 class="section-title tc">Us, in Frames</h2>
-    <div class="divider"></div>
     <div class="gallery-grid" id="gallery-grid"></div>
-  </section>
-
-  <!-- WISH BOARD -->
-  <section class="wish-section">
-    <p class="section-label tc">✦ 07 / wishes</p>
-    <h2 class="section-title tc">Send Her a Wish</h2>
-    <div class="divider"></div>
-    <div class="wish-box">
-      <textarea class="wish-input" id="wish-input" rows="3" placeholder="Write something sweet for Emy…"></textarea>
-      <button class="wish-submit" onclick="sendWish()">✦ Send Wish ✦</button>
-      <div id="wish-display"></div>
-    </div>
   </section>
 
   <footer class="footer">
@@ -452,16 +403,20 @@ function blowCandles(){
 
 /* REASONS */
 const reasons=[
-  {icon:'😂',text:'The way you laugh with your whole heart'},
-  {icon:'💫',text:'How you make every ordinary moment feel magical'},
-  {icon:'🌙',text:'Your late-night voice, soft and warm'},
-  {icon:'🌸',text:'The way you see beauty in the smallest things'},
-  {icon:'💌',text:'Every word you write feels like poetry'},
-  {icon:'🔥',text:'Your passion — it lights up everything around you'},
-  {icon:'🤍',text:'How you make me feel completely seen'},
-  {icon:'🌊',text:'Your calm in the middle of my storms'},
-  {icon:'✨',text:'The sparkle in your eyes when you\'re excited'},
-  {icon:'🏠',text:'Everywhere with you feels like home'},
+{ icon: '🤩', text: 'شوفتك بتخلي يومي العادي.. عيد ميلاد' },
+  { icon: '🤨', text: 'غيرتك اللي بتقولي "أنت ملكي لوحدي"' },
+  { icon: '🛡️', text: 'خوفك عليا اللي بيحسسني إني أغلى حد' },
+  { icon: '🕊️', text: 'طيبة قلبك اللي مفيش زيها في الدنيا' },
+  { icon: '👁️', text: 'سحر عينيكي اللي بسرح فيه ومش عايز أرجع' },
+  { icon: '🧠', text: 'فهمك ليا من غير ولا كلمة.. كأنك جزء مني' },
+  { icon: '🛋️', text: 'كلامي معاكي هو الراحة اللي بهرب بيها من العالم' },
+  { icon: '🎶', text: 'ضحكتك دي المزيكا اللي بترقص قلبي' },
+  { icon: '👑', text: 'جمالك اللي بيخطف العين والروح' },
+  { icon: '💢', text: 'عصبيتك اللي حتى فيها بتبقي قمر' },
+  { icon: '🎡', text: 'جنونك اللي بيخلي للحياة طعم تاني' },
+  { icon: '❤️', text: 'طريقة حبك ليا اللي خلتني ملك' },
+  { icon: '📣', text: 'تشجيعك اللي بيخليني أهد الدنيا وأبنيها عشانك' },
+  { icon: '😈', text: 'وقلة أدبك اللي بتجنني فيكي أكتر' }
 ];
 function buildReasons(){
   const track=$('reasons-track'),dots=$('slider-dots');
@@ -541,46 +496,24 @@ function buildHeartTree(){
   });
 }
 
-/* TYPEWRITER */
-function startTypewriter(){
-  const msg="Happy Birthday, Emy — On this day, the world became infinitely more beautiful because you exist in it. Every laugh you've shared, every quiet moment, every heartbeat — they all matter more than you know. You are not just a person. You are a feeling. Rare, warm, and completely irreplaceable. May today wrap you in all the joy you so freely give to others. May every wish you whisper find its way home. ✦ With all my love — always.";
-  const el=$('typewriter-text');let i=0;
-  const obs=new IntersectionObserver(entries=>{
-    if(entries[0].isIntersecting){
-      obs.disconnect();
-      const t=setInterval(()=>{
-        if(i>=msg.length){clearInterval(t);$('cursor').style.display='none';return;}
-        el.textContent+=msg[i++];
-      },40);
-    }
-  },{threshold:0.3});
-  obs.observe(el.parentElement.parentElement);
-}
-
-/* GALLERY — replace src with your image URLs, update caption & date */
+/* GALLERY — same folder as test.html; filenames from WhatsApp (spaces → encodeURIComponent) */
 function buildGallery(){
   const grid=$('gallery-grid');
-  const memories=[
-    {src:'',caption:'A moment I treasure',date:'January 2025'},
-    {src:'',caption:'Your smile, always',date:'February 2025'},
-    {src:'',caption:'Us, at our best',date:'March 2025'},
-    {src:'',caption:'Golden hour with you',date:'April 2025'},
-    {src:'',caption:'Laughing till it hurts',date:'June 2025'},
-    {src:'',caption:'One of my favourites',date:'December 2025'},
+  const base='WhatsApp Image 2026-04-15 at 12.53.53 AM';
+  const files=[
+    `${base}.jpeg`,
+    `${base} (1).jpeg`,
+    `${base} (2).jpeg`,
+    `${base} (3).jpeg`,
+    `${base} (4).jpeg`,
   ];
-  memories.forEach((m,i)=>{
+  files.forEach((name,i)=>{
     const card=document.createElement('div');
     card.className='gallery-card';
     card.style.transitionDelay=`${i*0.08}s`;
-    const imgHtml=m.src
-      ?`<img src="${m.src}" alt="${m.caption}" loading="lazy"/>`
-      :`<div class="gallery-placeholder-inner"><span>♡</span><p>Add your photo</p></div>`;
-    card.innerHTML=`
-      <div class="gallery-img-wrap">${imgHtml}</div>
-      <div class="gallery-info">
-        <p class="gallery-caption-text">${m.caption}</p>
-        <p class="gallery-date-text">✦ ${m.date}</p>
-      </div>`;
+    const src='./'+encodeURIComponent(name);
+    const imgHtml=`<img src="${src}" alt="" loading="lazy"/>`;
+    card.innerHTML=`<div class="gallery-img-wrap">${imgHtml}</div>`;
     grid.appendChild(card);
     const obs=new IntersectionObserver(entries=>{
       if(entries[0].isIntersecting){card.classList.add('visible');obs.disconnect();}
@@ -589,20 +522,9 @@ function buildGallery(){
   });
 }
 
-/* WISH BOARD */
-const wishes=[];
-function sendWish(){
-  const inp=$('wish-input'),val=inp.value.trim();
-  if(!val)return;
-  wishes.unshift(val);inp.value='';
-  $('wish-display').innerHTML=wishes.map(w=>`<p class="wish-item">✦ ${w}</p>`).join('');
-  launchConfetti(40);
-}
-$('wish-input').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendWish();}});
-
 /* START ALL */
 function startAll(){
-  buildReasons();buildGallery();buildHeartTree();buildTimeline();startTypewriter();
+  buildReasons();buildGallery();buildHeartTree();buildTimeline();
   updateCountdown();setInterval(updateCountdown,1000);
 }
 </script>
